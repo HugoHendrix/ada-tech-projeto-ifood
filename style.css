@@ -8,3 +8,10 @@
     --cor-vinho-profundo: #580C1F;
     --cor-branco: #FFFFFF;
   }
+
+  /* Estilos para o Carrossel de Imagens */
+.carousel-item img {
+    max-width: 100%; /* Garante que a largura das imagens se ajuste ao contêiner */
+    height: auto; /* Mantém a proporção de aspecto das imagens */
+  }
+  
