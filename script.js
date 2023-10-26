@@ -1,5 +1,5 @@
- // Função para validar o campo "nome"
- function validarNome() {
+// Função para validar o campo "nome"
+function validarNome() {
     const nomeInput = document.getElementById("nome");
     const nomeValue = nomeInput.value.trim();
 
@@ -38,13 +38,13 @@ function onSubmit(event) {
 }
 
 // Mostrar o banner de cookies após um pequeno atraso (por exemplo, 3 segundos)
-setTimeout(function() {
+setTimeout(function () {
     var cookieBanner = document.getElementById("cookieBanner");
     cookieBanner.style.display = "block";
 }, 3000); // 3000 milissegundos = 3 segundos
 
 // Ocultar o banner de cookies ao clicar no link "Aceitar"
-document.getElementById("acceptCookies").addEventListener("click", function() {
+document.getElementById("acceptCookies").addEventListener("click", function () {
     var cookieBanner = document.getElementById("cookieBanner");
     cookieBanner.style.display = "none";
 });

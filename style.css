@@ -12,11 +12,14 @@
 
 body {
     font-family: var(--font-padrao);
+    font-size: 1rem;
+    line-height: 1.6;
+
 }
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 /* Estilo para o menu de navegação */
 .navbar-collapse {
@@ -48,7 +51,7 @@ html {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #ff6347;
+    background-color: var(--cor-vermelho-profundo);
     /* Cor do sublinhado */
     transform: scaleX(0);
     transform-origin: center;
@@ -56,7 +59,7 @@ html {
 }
 
 .nav-link:hover {
-    color: #ff6347;
+    color: var(--cor-vermelho-intenso);
     /* Cor do texto ao passar o mouse */
 }
 
@@ -85,11 +88,14 @@ html {
 
 .title {
     font-family: var(--font-title);
+    font-size: 2.1rem;
 
 }
 
 .title-custom-red {
     color: var(--cor-vermelho-escuro);
+    font-size: 2rem;
+
 }
 
 /* style.css */
@@ -210,15 +216,18 @@ video {
 
 
 .custom-btn-red {
-    background-color: var(--cor-vermelho-intenso); /* Cor de fundo padrão (vermelho) */
-    color: var(--cor-branco); /* Cor do texto (branco) */
+    background-color: var(--cor-vermelho-intenso);
+    /* Cor de fundo padrão (vermelho) */
+    color: var(--cor-branco);
+    /* Cor do texto (branco) */
     transition: background-color 0.3s;
     border: 1px solid var(--cor-vinho-profundo);
 }
 
 /* Efeitos de hover para o botão */
 .custom-btn-red:hover {
-    background-color: var(--cor-vermelho-escuro); /* Cor de hover personalizada */
+    background-color: var(--cor-vermelho-escuro);
+    /* Cor de hover personalizada */
     border-color: var(--cor-vinho-profundo);
     color: var(--cor-branco);
 }
@@ -226,7 +235,8 @@ video {
 
 /* Estiliza o botão personalizado quando está no estado :active (clicado) */
 .custom-btn-red:active {
-    background-color: #FF6600; /* Cor de fundo quando clicado (laranja) */
+    background-color: #FF6600;
+    /* Cor de fundo quando clicado (laranja) */
 }
 
 
@@ -234,26 +244,28 @@ video {
 /* CSS para animação */
 @keyframes pulse {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
+
     50% {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
+
     100% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
-  
-  /* Aplicando a animação ao título das promoções */
-  .title-custom-red {
+}
+
+/* Aplicando a animação ao título das promoções */
+.title-custom-red {
     animation: pulse 4s infinite;
-  }
-  
+}
+
 
 
 .title-custom-table {
     margin: 3rem;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 
@@ -307,7 +319,7 @@ tbody tr:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    height: 550px;
     /* Defina a altura desejada para o parallax */
 }
 
@@ -316,6 +328,8 @@ tbody tr:hover {
     display: none;
     position: fixed;
     bottom: 20px;
+    width: 290px;
+    height: 200px;
     right: 20px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.7);
@@ -333,19 +347,67 @@ tbody tr:hover {
 
 
 .cupom-popup i {
-    font-size: 24px; /* Tamanho do ícone */
-    margin-right: 10px; /* Espaçamento à direita do ícone */
-    color: var(--cor-branco); /* Cor do ícone */
+    font-size: 24px;
+    /* Tamanho do ícone */
+    margin-right: 10px;
+    /* Espaçamento à direita do ícone */
+    color: var(--cor-branco);
+    /* Cor do ícone */
 }
+
 .cupom-popup {
     display: none;
     position: fixed;
-    bottom: 10px;
+    top: 10px;
     right: 10px;
-    background-color:var(--cor-vinho-profundo);
+    background-color: var(--cor-vinho-profundo);
     padding: 12px;
+    margin: 8px;
     border-radius: 8px;
-    color:var(--cor-branco);
+    color: var(--cor-branco);
     cursor: pointer;
 }
+
+/* Media query para dispositivos menores, como tablets */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Reduza o tamanho da fonte */
+    }
+}
+
+/* Media query para dispositivos muito pequenos, como smartphones */
+@media (max-width: 480px) {
+    body {
+        font-size: .7rem; /* Reduza ainda mais o tamanho da fonte */
+    }
+}
+/* Ocultar o carrossel em dispositivos móveis */
+@media (max-width: 768px) {
+    #carousel {
+        display: none; /* Oculta o carrossel */
+    }
+}
+
+/* Não exibir a classe .parallax em dispositivos móveis */
+@media (max-width: 768px) {
+    .parallax {
+        display: none; /* Oculta elementos com a classe .parallax */
+    }    
+}
+
+
+/* Não exibir a classe .cupom-popup em dispositivos móveis */
+@media (max-width: 768px) {
+    .cupom-popup {
+        display: none; /* Oculta o elemento com a classe .cupom-popup */
+    }
+}
+
+/* Não exibir a classe .cookie-banner em dispositivos móveis */
+@media (max-width: 768px) {
+    .cookie-banner {
+        display: none; /* Oculta o elemento com a classe .cookie-banner */
+    }
+}
+
 
