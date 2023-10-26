@@ -291,7 +291,7 @@
         <section class="container-fluid">
             <div class="container card p-4 mt-5 mb-5">
                 <h2 id="contato" class="mt-5">Formulário de Contato</h2>
-                <form onsubmit="onSubmit()" class="needs-validation">
+                <form onsubmit="onSubmit(event)" class="needs-validation">
                     <fieldset>
                         <legend>Informações Pessoais</legend>
                         <div class="mb-3">
@@ -304,7 +304,7 @@
         
                         <div class="mb-3">
                             <label for="email" class="form-label" title="Digite seu endereço de e-mail.">E-mail:</label>
-                            <input type="email" id="email" name="email" class="form-control" required title="Digite seu endereço de e-mail.">
+                            <input type="email" id="email" name="email" class="form-control" required title="Digite seu endereço de e-mail." minlength="6" maxlength="35">
                             <div class="invalid-feedback">
                                 Por favor, insira um endereço de e-mail válido.
                             </div>
@@ -314,25 +314,24 @@
                     <!-- Campo de seleção de data de nascimento -->
         
                     <fieldset>
-                        <legend>Data de Nascimento (obrigatório)</legend>
+                        <legend>Data de Nascimento </legend>
                         <div class="mb-3">
                             <label for="dataNascimento" title="Selecione a sua data de nascimento.">Selecione a data de nascimento:</label>
                             <input type="date" id="dataNascimento" name="dataNascimento" class="form-control"
-                                min="1940-01-01" max="2005-01-01" aria-required="true" title="Selecione a sua data de nascimento."> <span
-                                class="text-danger">*</span>
+                                min="1940-01-01" max="2005-01-01" aria-required="true" title="Selecione a sua data de nascimento."> 
                         </div>
                     </fieldset>
         
                     <fieldset>
                         <div class="mb-3">
-                            <label for="telefone" class="form-label" title="Digite seu número de telefone no formato 99-9999-9999.">Telefone (formato: 99-9999-9999) <span
+                            <label for="telefone" class="form-label" title="Digite seu número de telefone no formato 99-99999-9999.">Telefone (formato: 99-99999-9999) <span
                                     class="text-danger">*</span></label>
                             <input type="text" id="telefone" name="telefone" class="form-control"
-                                pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" required
-                                aria-label="Telefone no formato 99-9999-9999" aria-required="true"
-                                placeholder="Exemplo: 99-9999-9999" title="Digite seu número de telefone no formato 99-9999-9999.">
+                                pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" required
+                                aria-label="Telefone no formato 99-99999-9999" aria-required="true"
+                                placeholder="Exemplo: 99-99999-9999" title="Digite seu número de telefone no formato 99-99999-9999.">
                             <div class="invalid-feedback">
-                                Por favor, insira um número de telefone válido no formato 99-9999-9999.
+                                Por favor, insira um número de telefone válido no formato 99-99999-9999.
                             </div>
                         </div>
                     </fieldset>
