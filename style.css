@@ -1,6 +1,6 @@
 :root {
     --font-padrao: 'Montserrat', sans-serif;
-    --font-titulo: 'Poppins', sans-serif;
+    --font-title: 'Poppins', sans-serif;
     --cor-vermelho-escuro: #C52233;
     --cor-vermelho-profundo: #A51C30;
     --cor-vermelho-intenso: #A7333F;
@@ -14,4 +14,190 @@
     max-width: 100%; /* Garante que a largura das imagens se ajuste ao contêiner */
     height: auto; /* Mantém a proporção de aspecto das imagens */
   }
+
+body {
+    font-family: var(--font-padrao);
+}
+
+::selection {
+    background-color: var(--cor-vermelho-escuro); /* Cor de fundo da seleção de texto */
+    color: var(--cor-branco); /* Cor do texto selecionado */
+}
+
+
+.title {
+    font-family: var(--font-title);
+
+}
+
+.title-custom-red {
+    color: var(--cor-vermelho-escuro);
+}
+
+/* style.css */
+.animated-title {
+    animation: fadeIn 2s ease-in-out; /* Nome da animação, duração e função de temporização */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* style.css */
+.animated-border-bottom {
+    position: relative;
+}
+
+.animated-border-bottom::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-vermelho-escuro); /* Cor da linha */
+    bottom: 0;
+    left: 0;
+    transition: width 1s; /* Duração da animação */
+}
+
+.animated-border-bottom:hover::before {
+    width: 100%;
+}
+
+
+.hero-section {
+    position: relative;
+    height: 100vh; /* Ajusta a altura para cobrir a tela inteira */
+    overflow: hidden;
+}
+
+video {
+    object-fit: cover; /* Faz o vídeo cobrir todo o espaço da div */
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)); /* Cor de fundo semi-transparente */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* Cor do texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto para contraste */
+}
+
+#content-between {
+    padding: 20px; /* Adicione preenchimento para criar espaço em torno do conteúdo */
+    background-color: #f0f0f0; /* Adicione uma cor de fundo para destacar o conteúdo */
+  }
   
+  
+  
+
+  .card-img-top {
+    transition: transform 0.3s; /* Adiciona uma transição suave de 0.2 segundos na propriedade 'transform' */
+  }
+  
+  .card:hover .card-img-top {
+    transform: scale(1); /* Aumenta a escala da imagem em 10% no hover */
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.3s;
+  }
+  
+/* Estilizar as imagens do carrossel no hover */
+.hover-image:hover {
+    opacity: 0.8; /* Reduzir a opacidade da imagem no hover */
+    transform: scale(1.05); /* Aumentar ligeiramente o tamanho da imagem no hover */
+    cursor: pointer; /* Alterar o cursor para indicar interação */
+}
+
+  
+  .custom-btn-red {
+    background-color:var(--cor-vermelho-escuro); /* Cor vermelha personalizada */
+    border-color: var(--cor-vermelho-intenso); /* Cor da borda */
+    color: var(--cor-branco); /* Cor do texto (branco) */
+  }
+  
+  /* Efeitos de hover para o botão */
+  .custom-btn-red:hover {
+    background-color: #A51C30; /* Cor de hover personalizada */
+    border-color: #A51C30;
+  }
+
+
+.title-custom-table {
+    margin: 3rem;
+    font-size: 3rem;
+}
+
+
+/* Estilizar estrelas como amarelas ou douradas */
+.star-yellow {
+    color: #FFD700; /* Cor amarela ou dourada */
+    font-size: 2rem;
+}
+
+  
+
+  table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 80px auto;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+thead {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--cor-branco);
+}
+
+tbody tr:hover {
+    background-color: var(--cor-vermelho-escuro); /* Cor de fundo ao passar o mouse */
+    color: var(--cor-branco);
+}
+
+/* Estilo para o parallax */
+.parallax {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./assets/bg-ifood.jpg'); /* Substitua com o caminho para a sua imagem */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px; /* Defina a altura desejada para o parallax */
+}
