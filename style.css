@@ -217,8 +217,8 @@ video {
 
 /* Efeitos de hover para o botão */
 .custom-btn-red:hover {
-    background-color: #A51C30; /* Cor de hover personalizada */
-    border-color: #A51C30;
+    background-color: var(--cor-vermelho-escuro); /* Cor de hover personalizada */
+    border-color: var(--cor-vinho-profundo);
     color: var(--cor-branco);
 }
 
@@ -230,7 +230,24 @@ video {
 
 
 
-
+/* CSS para animação */
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Aplicando a animação ao título das promoções */
+  .title-custom-red {
+    animation: pulse 4s infinite;
+  }
+  
 
 
 .title-custom-table {
@@ -243,7 +260,7 @@ video {
 .star-yellow {
     color: #FFD700;
     /* Cor amarela ou dourada */
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 
 
@@ -282,7 +299,7 @@ tbody tr:hover {
 
 /* Estilo para o parallax */
 .parallax {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/bg-ifood.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/bg-ifood1.jpg');
     /* Substitua com o caminho para a sua imagem */
     background-attachment: fixed;
     background-position: center;
