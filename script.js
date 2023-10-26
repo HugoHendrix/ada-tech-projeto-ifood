@@ -36,3 +36,35 @@ function onSubmit(event) {
     event.preventDefault(); // Impede o envio padrão do formulário
     alert("Formulário enviado com sucesso!");
 }
+
+// Mostrar o banner de cookies após um pequeno atraso (por exemplo, 3 segundos)
+setTimeout(function() {
+    var cookieBanner = document.getElementById("cookieBanner");
+    cookieBanner.style.display = "block";
+}, 3000); // 3000 milissegundos = 3 segundos
+
+// Ocultar o banner de cookies ao clicar no link "Aceitar"
+document.getElementById("acceptCookies").addEventListener("click", function() {
+    var cookieBanner = document.getElementById("cookieBanner");
+    cookieBanner.style.display = "none";
+});
+
+
+
+const cupomPopup = document.getElementById("cupom-popup");
+
+let isPopupVisible = false;
+
+document.addEventListener("mousemove", (e) => {
+    if (e.clientY < 20 && !isPopupVisible) {
+        // Se o mouse estiver perto do topo da página e o pop-up não estiver visível
+        cupomPopup.style.display = "block";
+        isPopupVisible = true;
+    }
+});
+
+// Adicione um evento para ocultar o pop-up quando o usuário clicar nele
+cupomPopup.addEventListener("click", () => {
+    cupomPopup.style.display = "none";
+    isPopupVisible = false;
+});

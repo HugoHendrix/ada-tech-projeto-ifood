@@ -310,3 +310,42 @@ tbody tr:hover {
     height: 300px;
     /* Defina a altura desejada para o parallax */
 }
+
+/* Estilos para o Banner de Cookies */
+.cookie-banner {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+.cookie-banner a {
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+.cupom-popup i {
+    font-size: 24px; /* Tamanho do ícone */
+    margin-right: 10px; /* Espaçamento à direita do ícone */
+    color: var(--cor-branco); /* Cor do ícone */
+}
+.cupom-popup {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color:var(--cor-vinho-profundo);
+    padding: 12px;
+    border-radius: 8px;
+    color:var(--cor-branco);
+    cursor: pointer;
+}
+
