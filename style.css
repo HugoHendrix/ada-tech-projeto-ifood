@@ -17,8 +17,6 @@ html {
     scroll-behavior: smooth;
   }
 
-
-
 /* Estilo para o menu de navegação */
 .navbar-collapse {
     padding: 10px 0;
@@ -64,9 +62,6 @@ html {
 .nav-link:hover::before {
     transform: scaleX(1);
 }
-
-
-
 
 
 /* Estilos para o Carrossel de Imagens */
@@ -214,20 +209,28 @@ video {
 
 
 .custom-btn-red {
-    background-color: var(--cor-vermelho-escuro);
-    /* Cor vermelha personalizada */
-    border-color: var(--cor-vermelho-intenso);
-    /* Cor da borda */
-    color: var(--cor-branco);
-    /* Cor do texto (branco) */
+    background-color: var(--cor-vermelho-intenso); /* Cor de fundo padrão (vermelho) */
+    color: var(--cor-branco); /* Cor do texto (branco) */
+    transition: background-color 0.3s;
+    border: 1px solid var(--cor-vinho-profundo);
 }
 
 /* Efeitos de hover para o botão */
 .custom-btn-red:hover {
-    background-color: #A51C30;
-    /* Cor de hover personalizada */
+    background-color: #A51C30; /* Cor de hover personalizada */
     border-color: #A51C30;
+    color: var(--cor-branco);
 }
+
+
+/* Estiliza o botão personalizado quando está no estado :active (clicado) */
+.custom-btn-red:active {
+    background-color: #FF6600; /* Cor de fundo quando clicado (laranja) */
+}
+
+
+
+
 
 
 .title-custom-table {
