@@ -7,6 +7,7 @@
     --cor-vinho-escuro: #74121D;
     --cor-vinho-profundo: #580C1F;
     --cor-branco: #FFFFFF;
+
 }
 
 body {
@@ -268,7 +269,8 @@ video {
 table {
     border-collapse: collapse;
     width: 80%;
-    margin: 80px auto;
+    margin: 4rem auto;
+    padding: 2rem;
 }
 
 th,
