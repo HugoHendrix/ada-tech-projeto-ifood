@@ -44,35 +44,34 @@
 
     <header>
         <!-- Logotipo do iFood -->
-        <div class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="navbar navbar-expand-lg navbar-light bg-light ">
             <a class="navbar-brand" href="/" aria-label="Página Inicial">
                 <img src="./assets/logo-ifood (2).png" alt="Logo do iFood" class="img-fluid w-50">
             </a>
-
-            <!-- Botão de Navegação (visível apenas em telas pequenas) -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle de navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!-- Navegação do Site -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#inicio">Início</a>
+                        <a class="nav-link smooth-scroll" href="#inicio">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#menu">Menu</a>
+                        <a class="nav-link smooth-scroll" href="#menu">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sobre">Sobre Nós</a>
+                        <a class="nav-link smooth-scroll" href="#restaurante">Melhores Restaurantes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contato">Contato</a>
+                        <a class="nav-link smooth-scroll" href="#contato">Contato</a>
                     </li>
                 </ul>
+                              
+                
             </div>
         </div>
+        
 
         <div class="hero-section ">
             <video autoplay loop muted>
@@ -81,7 +80,7 @@
             </video>
             <div class="overlay"></div>
             <div class="hero-content text-center">
-                <h1 class="display-4 animated-title title" aria-label="Mensagem Introductória">
+                <h1 id="inicio" class="display-4 animated-title title" aria-label="Mensagem Introductória">
                     A Opção Mais Prática para Pedido de <span class="title-custom-red">Delivery</span> e Compras de
                     Supermercado
                 </h1>
@@ -95,7 +94,7 @@
     <div id="content-between">
         <section id="catalog ">
             <div class="container">
-                <h2 class="text-center mt-5 mb-5 display-4 animated-title title animated-border-bottom">Catálogo Digital
+                <h2 id="menu" class="text-center mt-5 mb-5 display-4 animated-title title animated-border-bottom">Catálogo Digital
                 </h2>
                 <p class="text-center mb-5">Escolha uma opção abaixo para explorar:</p>
 
@@ -193,7 +192,7 @@
         <!-- TABELA DOS RESTAURANTES -->
 
         <section class="container-fluid">
-            <h2 class="text-center mt-5 mb-5 title-custom-table animated-border-bottom">Tabela de Restaurantes
+            <h2 id="restaurante" class="text-center mt-5 mb-5 title-custom-table animated-border-bottom">Tabela de Restaurantes
                 Classificados </h2>
             <div class="container-fluid text-center">
                 <i class="fas fa-star star-yellow"></i>
@@ -236,6 +235,48 @@
                         <td>4.9</td>
                         <td>Steakhouse</td>
                     </tr>
+                    <tr>
+                        <td>Burger King</td>
+                        <td>4.2</td>
+                        <td>Hambúrgueres</td>
+                    </tr>
+                    <tr>
+                        <td>Pizzaria Bella Napoli</td>
+                        <td>4.7</td>
+                        <td>Pizzas Deliciosas</td>
+                    </tr>
+                    <tr>
+                        <td>Sushi Sato</td>
+                        <td>4.6</td>
+                        <td>Sushi e Sashimi</td>
+                    </tr>
+                    <tr>
+                        <td>Subway</td>
+                        <td>4.0</td>
+                        <td>Sanduíches Subs</td>
+                    </tr>
+                    <tr>
+                        <td>Starbucks</td>
+                        <td>4.3</td>
+                        <td>Cafés e Bebidas</td>
+                    </tr>
+                    <tr>
+                        <td>Churrascaria Gaúcha</td>
+                        <td>4.5</td>
+                        <td>Churrasco Brasileiro</td>
+                    </tr>
+                    <tr>
+                        <td>Panera Bread</td>
+                        <td>4.1</td>
+                        <td>Padaria e Café</td>
+                    </tr>
+                    <tr>
+                        <td>McAlister's Deli</td>
+                        <td>4.4</td>
+                        <td>Sanduíches e Saladas</td>
+                    </tr>
+                    
+                    
                 </tbody>
             </table>
 
@@ -249,7 +290,7 @@
         <!-- SEÇÃO DE FORMULÁRIO -->
         <section class="container-fluid">
             <div class="container card p-4 mt-5 mb-5">
-                <h1 class="mt-5">Formulário de Contato</h1>
+                <h2 id="contato" class="mt-5">Formulário de Contato</h2>
                 <form onsubmit="onSubmit()" class="needs-validation">
                     <fieldset>
                         <legend>Informações Pessoais</legend>
