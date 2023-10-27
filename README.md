@@ -21,3 +21,11 @@ O projeto de conclusão deste módulo tem como missão aprimorar a experiência 
 
 O "Programa Vem Ser Tech" oferece uma plataforma única para aprender, criar e inovar, capacitando-nos a enfrentar desafios reais no mundo do desenvolvimento web.
 
+
+## 🔗 Links
+[Anotações do código](https://hugohendrix.notion.site/Meu-projeto-Orienta-es-ba614e977e154022b0ca095838eb28a2?pvs=4)
+
+
+[Projeto iFood](https://hugohendrix.github.io/ada-tech-projeto-ifood/)
+
+
