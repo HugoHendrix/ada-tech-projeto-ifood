@@ -68,3 +68,44 @@ cupomPopup.addEventListener("click", () => {
     cupomPopup.style.display = "none";
     isPopupVisible = false;
 });
+
+
+
+const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const textArray = ["iFood é Rápido.", "iFood é Conveniente.", "iFood é Delicioso."];
+const newTextDelay = 2000; // Delay entre a troca de texto
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, 50);
+  }
+  else {
+    cursorSpan.classList.remove("typing");
+    setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, 50);
+  }
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex = (textArrayIndex + 1) % textArray.length; // Ciclo pelas diferentes qualidades
+    setTimeout(type, 500); // Atraso antes de começar a digitar o próximo texto
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () { // Inicia o efeito no carregamento do DOM
+  if (textArray.length) setTimeout(type, newTextDelay);
+});

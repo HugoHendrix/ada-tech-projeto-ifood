@@ -368,6 +368,35 @@ tbody tr:hover {
     cursor: pointer;
 }
 
+
+/* Estilizando o elemento que exibe o texto digitado */
+.typed-text {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--cor-vermelho-escuro); /* Cor do texto */
+    padding: 12px;
+    
+  }
+  
+  /* Estilizando o cursor piscando */
+  .cursor {
+    font-size: 3.6rem;
+    color: var(--cor-vermelho-escuro); /* Cor do cursor */
+    margin-left: 5px; /* Espaçamento entre o texto e o cursor */
+    animation: blink 0.7s infinite; /* Animação do cursor piscando */
+  }
+  
+  /* Animação para o cursor */
+  @keyframes blink {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+
 /* Media query para dispositivos menores, como tablets */
 @media (max-width: 768px) {
     body {
